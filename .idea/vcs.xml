@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ADMIN_PANEL/Chat_bot_medyczny" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/API_CONNECT/Chat_bot_medyczny" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/CALENDAR_API/Chat_bot_medyczny" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/CHAT_LLM_API/Chat_bot_medyczny" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/DOCTOR_API/Chat_bot_medyczny" vcs="Git" />
+  </component>
+</project>
