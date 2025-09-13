@@ -1,0 +1,43 @@
+
+---
+
+### `test_main.http`
+
+```http
+### Dodanie lekarza
+POST http://127.0.0.1:8000/doktor/
+Content-Type: application/json
+
+{
+  "imie": "Jan",
+  "nazwisko": "Kowalski",
+  "klasyfikacja": "kardiolog",
+  "email": "jan.kowalski@example.com"
+}
+
+### Pobranie lekarza
+GET http://127.0.0.1:8000/doktor/1
+Accept: application/json
+
+### Aktualizacja lekarza
+PUT http://127.0.0.1:8000/doktor/1
+Content-Type: application/json
+
+{
+  "imie": "Jan",
+  "nazwisko": "Kowalski",
+  "klasyfikacja": "neurolog",
+  "email": "jan.kowalski@example.com"
+}
+
+### Sprawdzenie dostępności lekarza
+GET http://127.0.0.1:8000/doktor/jan.kowalski@example.com/dostepnosc?datetime=2025-05-23T14:00:00
+Accept: application/json
+
+### Pobranie najbliższego wolnego terminu
+GET http://127.0.0.1:8000/doktor/jan.kowalski@example.com/najblizszy_termin
+Accept: application/json
+
+### Usunięcie lekarza
+DELETE http://127.0.0.1:8000/doktor/1
+Accept: application/json

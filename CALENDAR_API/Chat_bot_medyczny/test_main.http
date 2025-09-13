@@ -1,0 +1,46 @@
+### Testowanie dodawania wydarzenia
+POST http://127.0.0.1:8000/user/add_event
+Content-Type: application/json
+
+{
+  "start_datetime": "2025-09-13T11:00:00",
+  "end_datetime": "2025-09-13T13:00:00",
+  "summary": "Doktor Jan Nowak",
+  "location": "Gabinet medyczny INFOTECH.",
+  "description": "Bół brzucha",
+  "attendees": ["jakub.kossakowski@infotech.edu.pl","kossakjackob@gmail.com"]
+}
+
+### Testowanie edytowania wydarzenia
+PUT http://127.0.0.1:8000/user/edit_event/{event_id}
+Content-Type: application/json
+
+{
+  "start_datetime": "2025-06-02T11:00:00",
+  "end_datetime": "2025-06-02T13:00:00",
+  "summary": "Doktor Jan Nowak",
+  "location": "Gabinet medyczny INFOTECH.",
+  "description": "Bół ucha",
+  "attendees": ["jakub.kossakowski@infotech.edu.pl","kossakjackob@gmail.com"]
+}
+
+### Testowanie usuwania wydarzenia
+DELETE http://127.0.0.1:8000/user/delete_event/{event_id}
+
+### Testowanie pobierania szczegółów wydarzenia
+GET http://127.0.0.1:8000/user/event/{event_id}
+
+### Testowanie pobierania tokenu
+GET http://127.0.0.1:8000/token
+
+### Testowanie usuwania tokenu
+DELETE http://127.0.0.1:8000/token
+
+### Testowanie odświeżania tokenu
+POST http://127.0.0.1:8000/refresh_token
+
+### Wydarzenia w konkretnym dniu
+GET http://127.0.0.1:8000/user/events_by_day?date=2025-06-02
+
+### Wydarzenia w konkretnej godzinie
+GET http://127.0.0.1:8000/user/events_by_hour?date=2025-06-02&hour=11
