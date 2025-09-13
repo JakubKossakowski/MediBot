@@ -34,3 +34,37 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+AUTH0_SECRET=''
+APP_BASE_URL='http://localhost:3000'
+AUTH0_DOMAIN=''
+AUTH0_CLIENT_ID=''
+AUTH0_CLIENT_SECRET=''
+NEXT_PUBLIC_API_BASE_URL=http://localhost:8000
+
+Instrukcja krok po kroku
+
+AUTH0_SECRET:
+Wygeneruj losowy ciąg znaków np. w terminalu: openssl rand -hex 32
+Wklej do pola AUTH0_SECRET.
+
+APP_BASE_URL:
+Podstawowy URL Twojej aplikacji.
+Lokalnie: http://localhost:3000
+
+AUTH0_DOMAIN:
+Zaloguj się do Auth0.
+Przejdź do Applications -> Twoja aplikacja -> Settings.
+Skopiuj pole Domain.
+
+AUTH0_CLIENT_ID:
+W panelu Auth0 -> Applications -> Twoja aplikacja -> Settings.
+Skopiuj pole Client ID.
+
+AUTH0_CLIENT_SECRET:
+W panelu Auth0 -> Applications -> Twoja aplikacja -> Settings.
+Skopiuj pole Client Secret.
+
+NEXT_PUBLIC_API_BASE_URL:
+URL do backendu API.
+Lokalnie np. http://localhost:8000.
+Na produkcji użyj URL produkcyjnego API.

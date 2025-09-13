@@ -12,7 +12,7 @@ class AgentSettingsSchema(BaseModel):
     available_hours: List[str] = Field(default_factory=lambda: ["09:00","10:00","11:00","12:00","13:00","14:00","15:00","16:00","17:00"])
 
     class Config:
-        schema_extra = {
+        json_schema_extra = {
             "example": {
                 "llm_model": "gpt-4o-mini",
                 "voice": "N0GCuK2B0qwWozQNTS8F",
